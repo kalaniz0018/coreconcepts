@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
+import CoreConcept from "./CoreConcept";
+import { CORE_CONCEPTS } from "../data";
 
-const CoreConcepts = ({ title, text, image }) => {
+const CoreConcepts = () => {
   return (
     <>
-      <li>
-      <img src={image} title={title}></img>
-      <h1>{title}</h1>
-      <p>{text}</p>
-    </li>
+      <section id="core-concepts">
+        <h2>Core concepts</h2>
+        <ul>
+          {CORE_CONCEPTS.map((conceptItem) => (
+            <CoreConcept key={conceptItem.title} {...conceptItem} />
+          ))}
+        </ul>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default CoreConcepts
+export default CoreConcepts;
