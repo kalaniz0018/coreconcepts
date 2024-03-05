@@ -1,4 +1,4 @@
-import React , { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { EXAMPLES } from "../dataExamples.js";
 import TabButton from "./TabButton/TabButton.jsx";
 import Section from "./Section.jsx";
@@ -29,27 +29,26 @@ const Examples = () => {
   return (
     <>
       <Section title="Examples" id="examples">
-       
         <menu>
           <TabButton
             label="Components"
-            onSelect={() => handleSelect("components")}
             isSelected={selectedTopic === "components"}
+            onClick={() => handleSelect("components")}
           />
           <TabButton
             label="JSX"
             isSelected={selectedTopic === "jsx"}
-            onSelect={() => handleSelect("jsx")}
+            onClick={() => handleSelect("jsx")}
           />
           <TabButton
             label="Props"
             isSelected={selectedTopic === "props"}
-            onSelect={() => handleSelect("props")}
+            onClick={() => handleSelect("props")}
           />
           <TabButton
             label="State"
             isSelected={selectedTopic === "state"}
-            onSelect={() => handleSelect("state")}
+            onClick={() => handleSelect("state")}
           />
         </menu>
 

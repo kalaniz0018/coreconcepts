@@ -1,12 +1,12 @@
 import React from "react";
 
-const TabButton = ({ label, onSelect, isSelected }) => {
+const TabButton = ({ label, isSelected, ...props }) => {
 
 
   return (
     <>
       <li>
-        <button className={isSelected ? 'active' : undefined} onClick={onSelect}>{label}</button>
+        <button className={isSelected ? 'active' : undefined} {...props}>{label}</button>
       </li>
     </>
   );
